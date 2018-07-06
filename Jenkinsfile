@@ -22,5 +22,7 @@ node() {
 		withEnv(["PATH+GRADLE=$GRADLE_HOME/bin"]) {
 			bat "gradle cucumber"
 		}
-	}		
+		step([$class: 'JUnitResultArchiver', testResults: 'build/test-results/test/**/*.xml'])
+	}	
+	
 }
