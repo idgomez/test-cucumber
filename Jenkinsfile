@@ -25,4 +25,9 @@ node() {
 		step([$class: 'JUnitResultArchiver', testResults: 'build/test-results/test/**/*.xml'])
 	}	
 	
+	stage('Arifact publish') {
+		
+		archive 'build/libs/*.jar'
+	}	
+	
 }
