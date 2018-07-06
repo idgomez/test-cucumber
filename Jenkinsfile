@@ -11,7 +11,7 @@ node() {
 		def GRADLE_HOME = tool name: "gradle-4" , type: 'gradle'
 		
 		withEnv(["PATH+GRADLE=$GRADLE_HOME/bin"]) {
-			bat "gradle build"
+			bat "gradle build -x test"
 		}
 	}	
 
