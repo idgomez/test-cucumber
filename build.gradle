@@ -30,7 +30,7 @@ task cucumber() {
 }
 
 //Ensure the cucumber tests are executed as part of the build. Makes for a very pretty output.
-build.dependsOn cucumber
+//build.dependsOn cucumber
 
 dependencies {
     // Groovy library for groovy building!
