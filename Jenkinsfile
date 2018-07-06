@@ -2,7 +2,7 @@ node() {
 	
 	stage('Checkout') {
 		
-		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/idgomez/test-cucumber.git']]])
+		checkout scm
 	}
 	
 
