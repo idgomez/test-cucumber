@@ -20,7 +20,7 @@ node() {
 		def GRADLE_HOME = tool name: "gradle-4" , type: 'gradle'
 		
 		withEnv(["PATH+GRADLE=$GRADLE_HOME/bin"]) {
-			bat "gradle cucumber"
+			bat "gradle build cucumber"
 		}
 		step([$class: 'JUnitResultArchiver', testResults: 'build/test-results/test/**/*.xml'])
 	}	
