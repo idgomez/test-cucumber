@@ -14,4 +14,4 @@ Feature: Division
     Given I have entered 6 into the calculator
     And I have entered 3 into the calculator
     When I press divide
-    Then the stored result should be 2.0
+    Then the stored result should be 2.1
