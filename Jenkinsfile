@@ -27,7 +27,7 @@ node() {
 	
 	stage('Arifact publish') {
 		
-		archive 'build/libs/*.jar'
+		archiveArtifacts 'build/libs/*.jar'
 	}	
 	
 }
